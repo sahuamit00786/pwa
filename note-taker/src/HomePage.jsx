@@ -48,7 +48,7 @@ function HomePage() {
     useEffect(() => {
     const finalData = async () => {
       try {
-    const response = await fetch("http://localhost:3000/getAll", {
+    const response = await fetch("https://pwaa-bqem.onrender.com/getAll", {
       method: "GET"
     });
         const result = await response.json();
@@ -73,7 +73,7 @@ setInterval(async () => {
 
     if (filteredData.length === 0) return; 
 
-    const response = await fetch("http://localhost:3000/syncNotes", {
+    const response = await fetch("https://pwaa-bqem.onrender.com/syncNotes", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
